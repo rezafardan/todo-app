@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Todo Apps</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <header class="header">
+        <div class="waktu" id="waktu"></div>
+        <div class="profile" id="profile">Profile</div>
+      </header>
+
+      <!-- Awal form inputan -->
+      <form class="input-area" id="input-area">
+        <h4>Task</h4>
+        <label for="judul-todo">Input task :</label>
+        <input type="text" name="judul-todo" id="judul-todo" required />
+
+        <label for="prioritas">Choose priority :</label>
+        <select id="prioritas" name="prioritas">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+      <!-- Akhir form inputan -->
+
+      <!-- Awal List -->
+      <section>
+        <h4>On Going Task</h4>
+        <div id="list-todo"></div>
+      </section>
+      <!-- Akhir List -->
+
+      <!-- Awal List Done -->
+      <section>
+        <h4 class="done-item">
+          Task Done<span
+            ><button type="submit" id="deleteDoneBtn" class="btn-delete-done">
+              Delete All
+            </button></span
+          >
+        </h4>
+
+        <div id="list-done"></div>
+      </section>
+      <!-- Akhir List -->
+    </div>
+    <script src="mais.js"></script>
+  </body>
+</html>

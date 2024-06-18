@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 25%;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 2px 3px 52px 5px rgba(178, 254, 250, 0.3);
+  background-color: #ffffff;
+}
+
+hr {
+  margin: 0 1.5rem;
+  background-color: #4fbad0;
+}
+
+.header {
+  background: #b2fefa;
+  background: -webkit-linear-gradient(to right, #0ed2f7, #b2fefa);
+  background: linear-gradient(200deg, #0ed2f7, #b2fefa);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 0.5rem;
+}
+
+#judul-todo {
+  padding: 0 10px;
+  text-align: left;
+  transition-property: box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  background-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0ed0f788;
+  border-radius: 4px;
+  color: #000000;
+  width: 100%;
+  cursor: text;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  height: 30px;
+}
+
+#judul-todo:hover {
+  box-shadow: 0px 2px 4px rgb(39 44 52 / 12%);
+}
+
+#judul-todo:focus {
+  transition-property: border-color, box-shadow;
+  border-color: #969696;
+  outline: 0px;
+  box-shadow: 0 0 0 3px #b2fefa;
+}
+
+#prioritas {
+  padding: 0 10px;
+  text-align: left;
+  transition-property: box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  background-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0ed0f788;
+  border-radius: 4px;
+  color: #000000;
+  width: 100%;
+  cursor: text;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-style: normal;
+  height: 30px;
+}
+
+#submit,
+#deleteDoneBtn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 12px;
+  line-height: 20px;
+  height: 30px;
+  max-height: 30px;
+  background: #0ed0f7;
+  font-weight: 700;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  transition-timing-function: ease-in-out;
+  transition-property: box-shadow;
+  transition-duration: 150ms;
+}
+
+#submit:hover {
+  background-color: #0ed0f7c0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  gap: 0.4rem;
+}
+
+#list-todo,
+#list-done {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.list-todo-item {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 5.5fr 0.5fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "badge-prioritas checkbox tanggal tombol-delete"
+    "badge-prioritas checkbox judul tombol-delete";
+  align-items: center;
+  align-content: center;
+  height: 4.6rem;
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.badge-prioritas {
+  grid-area: badge-prioritas;
+  width: 16px;
+  height: 100%;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.checkbox {
+  grid-area: checkbox;
+}
+
+.tanggal {
+  align-self: center;
+  grid-area: tanggal;
+  font-size: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.judul {
+  align-self: center;
+  grid-area: judul;
+  font-size: 1rem;
+  padding: 0.4rem 0;
+  margin-bottom: 0.6rem;
+}
+
+.tombol-delete {
+  justify-self: center;
+  align-self: center;
+  grid-area: tombol-delete;
+  width: 22px;
+  height: 22px;
+  background-color: #ff3c39;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 0.8rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+.tombol-delete:hover {
+  background-color: #ff6361;
+  color: #d1d1d1;
+}
+
+.done-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.done-item a {
+  text-decoration: none;
+  font-size: 0.6rem;
+}
+
+.low {
+  background-color: #6f975c;
+  writing-mode: vertical-lr;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.6rem;
+  transform: rotate(180deg);
+}
+
+.medium {
+  background-color: #d2d462;
+  writing-mode: vertical-lr;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.6rem;
+  transform: rotate(180deg);
+}
+
+.high {
+  background-color: #ff6361;
+  writing-mode: vertical-lr;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.6rem;
+  transform: rotate(180deg);
+}
+
+.task-delete:hover {
+  color: black;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 90%;
+  }
+}
